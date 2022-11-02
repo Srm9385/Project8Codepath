@@ -20,31 +20,31 @@ Each color is vulnerable to only 2 of the 6 possible exploits. First discover wh
 
 ## Blue
 
-Vulnerability #1: __________________
+Vulnerability #1: SQL Injection
 
-Description:
+Description: When sending a query to the database the id parameter, the backend does not sanitize the query for SQL injections so one can pass in malicious code into the query for the salesperson database
 
-<img src="blue-vuln1.gif">
+<img src="sqlinjectblue.gif">
 
 
 ## Green
 
-Vulnerability #1: __________________
+Vulnerability #1: Cross-Site Scripting
 
-Description:
+Description: The contact form is vulnerable to XSS, so someone could post malicious code into the contact form and an admin could execute the script upon opening the page where contact requests are stored
 
-<img src="green-vuln1.gif">
+<img src="greenxss.gif">
 
 
 ## Red
 
-Vulnerability #1: __________________
+Vulnerability #1: Indirect Object Reference Vulnerability
 
-Description:
+Description: When sending the query for a sales person's contact information, someone could manipulate the query and request the information of a saleperson whose profile is not publicly disclosed by the web developer/company
 
-<img src="red-vuln1.gif">
+<img src="redidor.gif">
 
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+The SQL injection gave me trouble, I had to add the other ' at the end of the injection
